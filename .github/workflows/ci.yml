@@ -22,6 +22,6 @@ jobs:
         run: go vet ./...
       - name: testの実行
         run: go test
-      - run: buildの実行
+      - name: buildの実行
         run: go build .
 
