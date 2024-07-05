@@ -1,4 +1,4 @@
-FROM golang:1.22.2 as builder
+FROM golang:1.22.4 as builder
 
 WORKDIR /app
 COPY go.mod go.sum ./
@@ -8,3 +8,4 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o cicdhandson
 FROM scratch
 COPY --from=builder /app/cicdhandson /app
 ENTRYPOINT ["/app"]
+
