@@ -13,7 +13,7 @@ jobs:
       - name: Goの環境をセットアップ
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22.2'
+          go-version: '1.22.4'
       - name: フォーマットの実行
         run: test -z $(go fmt -l .)
       - name: 静的解析
